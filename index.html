@@ -15,7 +15,7 @@
       <img src="./images/forest-bg-dk.png" alt="forest bg" class="img-bg" />
 
       <div class="attacks">
-        <div class="ap-text">100 AP</div>
+        <div class="ap-text"><span id="ap-total">100</span> AP</div>
         <progress id="ap-meter" value="100" max="100"></progress>
         <button class="attack-btn arcane-scepter" onclick="useArcaneScepter(event)"></button>
         <button class="attack-btn entangle" onclick="useEntangle(event)"></button>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="enemy">
-        <div class="hp-text">100 HP</div>
+        <div class="hp-text"><span id="health-total">100 HP</span></div>
         <progress id="hp-meter" value="100" max="100"></progress>
         <div class="freaky-fungus walk"></div>
       </div>

@@ -24,9 +24,15 @@ onReady();
 
 function useArcaneScepter(event) {
   event.target;
-  console.log('arcane scepter selected');
-  attackAP -= 12;
-  fungusHP -= 14;
+  // damage levels
+  fungusHP -= 12;
+  attackAP -= 14;
+  // grab variables and change levels
+  const attackTotal = document.getElementById('ap-total');
+  attackTotal.innerHTML = `${attackAP}`;
+  const healthTotal = document.getElementById('health-total');
+  healthTotal.innerHTML = `${fungusHP}`;
+  // test new levels
   console.log(attackAP, fungusHP);
 }
 
