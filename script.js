@@ -6,6 +6,8 @@
 
 let fungusHP = 100;
 let attackAP = 100;
+const attackTotal = document.getElementById('ap-total');
+const healthTotal = document.getElementById('health-total');
 
 function onReady() {
   console.log('Ready to go!');
@@ -24,14 +26,9 @@ onReady();
 
 function useArcaneScepter(event) {
   event.target;
-  // damage levels
-  fungusHP -= 12;
-  attackAP -= 14;
-  // grab variables and change levels
-  const attackTotal = document.getElementById('ap-total');
-  attackTotal.innerHTML = `${attackAP}`;
-  const healthTotal = document.getElementById('health-total');
-  healthTotal.innerHTML = `${fungusHP}`;
+  // update levels with damage
+  attackTotal.innerHTML = `${(attackAP -= 12)}`;
+  healthTotal.innerHTML = `${(fungusHP -= 14)}`;
   // test new levels
   console.log(attackAP, fungusHP);
 }
@@ -40,9 +37,11 @@ function useArcaneScepter(event) {
 
 function useEntangle(event) {
   event.target;
-  console.log('entangle selected');
+  // damage levels
   attackAP -= 23;
   fungusHP -= 9;
+  // grab variables and change levels
+
   console.log(attackAP, fungusHP);
 }
 
