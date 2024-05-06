@@ -25,6 +25,9 @@ onReady();
 function useArcaneScepter(event) {
   event.target;
   console.log('arcane scepter selected');
+  attackAP -= 12;
+  fungusHP -= 14;
+  console.log(attackAP, fungusHP);
 }
 
 // entangle button function
@@ -32,6 +35,9 @@ function useArcaneScepter(event) {
 function useEntangle(event) {
   event.target;
   console.log('entangle selected');
+  attackAP -= 23;
+  fungusHP -= 9;
+  console.log(attackAP, fungusHP);
 }
 
 // dragon-blade button function
@@ -39,6 +45,9 @@ function useEntangle(event) {
 function useDragonBlade(event) {
   event.target;
   console.log('dragon blade selected');
+  attackAP -= 38;
+  fungusHP -= 47;
+  console.log(attackAP, fungusHP);
 }
 
 // star-fire button function
@@ -46,4 +55,7 @@ function useDragonBlade(event) {
 function useStarFire(event) {
   event.target;
   console.log('star fire selected');
+  attackAP -= 33;
+  fungusHP -= 25;
+  console.log(attackAP, fungusHP);
 }
