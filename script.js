@@ -37,11 +37,10 @@ function useArcaneScepter(event) {
 
 function useEntangle(event) {
   event.target;
-  // damage levels
-  attackAP -= 23;
-  fungusHP -= 9;
-  // grab variables and change levels
-
+  // update levels with damage
+  attackTotal.innerHTML = `${(attackAP -= 23)}`;
+  healthTotal.innerHTML = `${(fungusHP -= 9)}`;
+  // test new levels
   console.log(attackAP, fungusHP);
 }
 
@@ -49,9 +48,10 @@ function useEntangle(event) {
 
 function useDragonBlade(event) {
   event.target;
-  console.log('dragon blade selected');
-  attackAP -= 38;
-  fungusHP -= 47;
+  // update levels with damage
+  attackTotal.innerHTML = `${(attackAP -= 38)}`;
+  healthTotal.innerHTML = `${(fungusHP -= 47)}`;
+  // test new levels
   console.log(attackAP, fungusHP);
 }
 
@@ -59,8 +59,9 @@ function useDragonBlade(event) {
 
 function useStarFire(event) {
   event.target;
-  console.log('star fire selected');
-  attackAP -= 33;
-  fungusHP -= 25;
+  // update levels with damage
+  attackTotal.innerHTML = `${(attackAP -= 33)}`;
+  healthTotal.innerHTML = `${(fungusHP -= 25)}`;
+  // test new levels
   console.log(attackAP, fungusHP);
 }
