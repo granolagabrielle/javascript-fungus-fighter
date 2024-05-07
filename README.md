@@ -22,11 +22,11 @@ When you click an attack button:
 
 **Render state changes to the DOM**
 
-- Update the text above the attack buttons (eg, "100 AP")
-- Update the text above the enemy fungus (eg, "100 HP")
-- If the Freaky Fungus runs out of HP, the monster is dead and you win! Replace the `walk` class with a `dead` class on the freaky-fungus element, to make them fall over and die.
-- If you run out of AP, the monster wins and humanity is doomed 😢 Replace the `walk` class with a `jump` class on the freaky-fungus element, to make them jump for the glory of the fungal race.
-  - You may no longer attack, if AP is `0`. Give all of the attack buttons a [`disabled`](https://www.w3schools.com/tags/att_button_disabled.asp) attribute, so they may no longer be used. 
+[X] Update the text above the attack buttons (eg, "100 AP")
+[X] Update the text above the enemy fungus (eg, "100 HP")
+[X] If the Freaky Fungus runs out of HP, the monster is dead and you win! Replace the `walk` class with a `dead` class on the freaky-fungus element, to make them fall over and die.
+[X] If you run out of AP, the monster wins and humanity is doomed 😢 Replace the `walk` class with a `jump` class on the freaky-fungus element, to make them jump for the glory of the fungal race.
+[X] You may no longer attack, if AP is `0`. Give all of the attack buttons a [`disabled`](https://www.w3schools.com/tags/att_button_disabled.asp) attribute, so they may no longer be used. 
 
 ## Stretch Goals
 

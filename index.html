@@ -17,16 +17,16 @@
       <div class="attacks">
         <div class="ap-text"><span id="ap-total">100</span> AP</div>
         <progress id="ap-meter" value="100" max="100"></progress>
-        <button class="attack-btn arcane-scepter" onclick="useArcaneScepter(event)"></button>
-        <button class="attack-btn entangle" onclick="useEntangle(event)"></button>
-        <button class="attack-btn dragon-blade" onclick="useDragonBlade(event)"></button>
-        <button class="attack-btn star-fire" onclick="useStarFire(event)"></button>
+        <button class="attack-btn arcane-scepter" id="arcane-button" onclick="useArcaneScepter(event)"></button>
+        <button class="attack-btn entangle" id="entangle-button" onclick="useEntangle(event)"></button>
+        <button class="attack-btn dragon-blade" id="dragon-button" onclick="useDragonBlade(event)"></button>
+        <button class="attack-btn star-fire" id="star-button" onclick="useStarFire(event)"></button>
       </div>
 
       <div class="enemy">
-        <div class="hp-text"><span id="health-total">100 HP</span></div>
+        <div class="hp-text"><span id="health-total">100</span> HP</div>
         <progress id="hp-meter" value="100" max="100"></progress>
-        <div class="freaky-fungus walk"></div>
+        <div id="fungus-movement" class="freaky-fungus walk"></div>
       </div>
     </div>
   </body>
