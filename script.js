@@ -9,11 +9,13 @@ let attackAP = 100;
 const attackTotal = document.getElementById('ap-total');
 const healthTotal = document.getElementById('health-total');
 const fungusMovement = document.getElementById('fungus-movement');
-// const buttons = document.getElementsByClassName('attack-btn');
+// const buttons = document.getElementsBy('attack-btn');
 const arcaneButton = document.getElementById('arcane-button');
 const entangleButton = document.getElementById('entangle-button');
 const dragonButton = document.getElementById('dragon-button');
 const starButton = document.getElementById('star-button');
+const apMeter = document.getElementById('ap-meter');
+const hpMeter = document.getElementById('hp-meter');
 
 function onReady() {
   console.log('Ready to go!');
@@ -35,6 +37,8 @@ function useArcaneScepter(event) {
   // update levels with damage
   attackTotal.innerHTML = `${(attackAP -= 12)}`;
   healthTotal.innerHTML = `${(fungusHP -= 14)}`;
+  apMeter.value -= 12;
+  hpMeter.value -= 14;
   // test new levels
   console.log(attackAP, fungusHP);
   checkHealth();
@@ -47,6 +51,8 @@ function useEntangle(event) {
   // update levels with damage
   attackTotal.innerHTML = `${(attackAP -= 23)}`;
   healthTotal.innerHTML = `${(fungusHP -= 9)}`;
+  apMeter.value -= 12;
+  hpMeter.value -= 14;
   // test new levels
   console.log(attackAP, fungusHP);
   checkHealth();
@@ -59,6 +65,8 @@ function useDragonBlade(event) {
   // update levels with damage
   attackTotal.innerHTML = `${(attackAP -= 38)}`;
   healthTotal.innerHTML = `${(fungusHP -= 47)}`;
+  apMeter.value -= 12;
+  hpMeter.value -= 14;
   // test new levels
   console.log(attackAP, fungusHP);
   checkHealth();
@@ -71,6 +79,8 @@ function useStarFire(event) {
   // update levels with damage
   attackTotal.innerHTML = `${(attackAP -= 33)}`;
   healthTotal.innerHTML = `${(fungusHP -= 25)}`;
+  apMeter.value -= 12;
+  hpMeter.value -= 14;
   // test new levels
   console.log(attackAP, fungusHP);
   checkHealth();
@@ -85,13 +95,13 @@ function useStarFire(event) {
 
 function checkHealth() {
   if (fungusHP <= 0) {
-    fungusMovement.classList.remove('freaky-fungus', 'walk');
-    fungusMovement.classList.add('freaky-fungus', 'dead');
+    let fungusHealth = document.querySelector('.walk');
+    fungusHealth.classList.replace('walk', 'dead');
     healthTotal.innerHTML = `0`;
   }
   if (attackAP <= 0) {
-    fungusMovement.classList.remove('freaky-fungus', 'walk');
-    fungusMovement.classList.add('freaky-fungus', 'jump');
+    let fungusHealth = document.querySelector('.walk');
+    fungusHealth.classList.replace('walk', 'jump');
     attackTotal.innerHTML = `0`;
     arcaneButton.disabled = true;
     entangleButton.disabled = true;
@@ -100,9 +110,14 @@ function checkHealth() {
   }
 }
 
-// let fungusStatus = document.getElementsByClassName('#freaky-fungus walk');
+// The graveyard...
+
+// let fungusStatus = document.getElementsByClassName('dead');
+// fungusStatus.classList.replace('dead', 'walk');
+
 // fungusStatus.classList.remove('#freaky-fungus walk');
 // fungusStatus.classList.add('#freaky-fungus dead');
-// // let fungusHealth = document.querySelector('#walk');
-// // fungusHealth.remove('#walk');
-// // fungusHealth.add()
+
+// let fungusHealth = document.querySelector('.walk');
+// fungusHealth.remove('#walk');
+// fungusHealth.add()
